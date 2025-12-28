@@ -4,12 +4,12 @@ import { config } from '../config';
 const swaggerDefinition = {
   openapi: '3.0.0',
   info: {
-    title: 'XGrow API Documentation',
+    title: 'Nimion API Documentation',
     version: '1.0.0',
-    description: 'Complete API documentation for XGrow Backend',
+    description: 'Complete API documentation for Nimion Backend',
     contact: {
-      name: 'XGrow Support',
-      email: 'support@xgrow.com',
+      name: 'Nimion Support',
+      email: 'support@nimion.com',
     },
     license: {
       name: 'ISC',
@@ -22,7 +22,7 @@ const swaggerDefinition = {
       description: 'Development server',
     },
     {
-      url: 'https://api.xgrow.com',
+      url: 'https://api.nimion.com',
       description: 'Production server',
     },
   ],

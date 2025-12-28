@@ -1,7 +1,7 @@
 import { config } from '../config';
 
 // Landing page password (can be moved to env)
-const LANDING_PASSWORD = 'xgrow2025';
+const LANDING_PASSWORD = 'nimion2025';
 
 /**
  * Status information for the landing page
@@ -22,7 +22,7 @@ export const getLoginPageHtml = (error?: string): string => {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>XGrow API - Login</title>
+  <title>Nimion API - Login</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -140,7 +140,7 @@ export const getLoginPageHtml = (error?: string): string => {
         <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
       </svg>
     </div>
-    <h1 class="logo">XGrow API</h1>
+    <h1 class="logo">Nimion API</h1>
     <p class="subtitle">Enter password to access dashboard</p>
     
     ${error ? `<div class="error">${error}</div>` : ''}
@@ -193,7 +193,7 @@ export const getLandingPageHtml = (status?: LandingPageStatus): string => {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>XGrow API Server</title>
+  <title>Nimion API Server</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -336,7 +336,7 @@ export const getLandingPageHtml = (status?: LandingPageStatus): string => {
   <div class="container">
     <div class="header">
       <div>
-        <h1 class="logo">XGrow API</h1>
+        <h1 class="logo">Nimion API</h1>
         <p class="subtitle">Backend REST API Server with Real-time Support</p>
       </div>
       <a href="/?logout=1" class="logout-btn">Logout</a>

@@ -1,8 +1,8 @@
-# XGrow API Documentation
+# Nimion API Documentation
 
 ## Overview
 
-XGrow Backend API with TypeScript, Express, Prisma ORM, Socket.io, and Redis caching.
+Nimion Backend API with TypeScript, Express, Prisma ORM, Socket.io, and Redis caching.
 
 **Base URL:** `http://localhost:3000`
 

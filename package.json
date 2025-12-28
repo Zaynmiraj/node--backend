@@ -1,7 +1,7 @@
 {
-  "name": "xgrow-backend",
+  "name": "nimion-backend",
   "version": "1.0.0",
-  "description": "XGrow Backend API with TypeScript, Express, Prisma, Socket.io, and Redis",
+  "description": "Nimion Backend API with TypeScript, Express, Prisma, Socket.io, and Redis",
   "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",

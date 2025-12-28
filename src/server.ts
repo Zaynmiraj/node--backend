@@ -51,7 +51,7 @@ const startServer = async () => {
       console.log(`
 ╔═════════════════════════════════════════════════════════════════════╗
 ║                                                                     ║
-║   XGrow API Server                                                  ║
+║   Nimion API Server                                                  ║
 ║                                                                     ║
 ║   Environment: ${config.env.padEnd(52)}║
 ║   Port: ${String(config.port).padEnd(59)}║

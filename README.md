@@ -1,4 +1,4 @@
-# XGrow Backend API
+# Nimion Backend API
 
 A production-ready Node.js backend built with TypeScript, Express.js, Prisma ORM, Socket.io, and Redis.
 
@@ -86,7 +86,7 @@ backend/
 
    Edit `.env` with your credentials:
    ```env
-   DATABASE_URL="mysql://user:password@localhost:3306/xgrow_db"
+   DATABASE_URL="mysql://user:password@localhost:3306/nimion_db"
    REDIS_URL="redis://localhost:6379"
    JWT_SECRET="your-secret-key"
    API_KEY="your-api-key"
@@ -112,7 +112,7 @@ backend/
    ```
 
 6. **Access the server**
-   - Dashboard: http://localhost:3000 (password: `xgrow2025`)
+   - Dashboard: http://localhost:3000 (password: `nimion2025`)
    - API Docs: http://localhost:3000/api-docs
    - Health: http://localhost:3000/api/health
 
@@ -186,4 +186,4 @@ curl -H "X-API-Key: <api-key>" http://localhost:3000/api/users
 
 ## License
 
-ISC © XGrow
+ISC © Nimion

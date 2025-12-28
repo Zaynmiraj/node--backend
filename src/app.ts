@@ -62,7 +62,7 @@ app.use('/public', express.static(path.join(process.cwd(), 'public')));
 // Swagger API Documentation
 app.use('/api-docs', swaggerUi.serve as any[], swaggerUi.setup(swaggerSpec, {
   customCss: '.swagger-ui .topbar { display: none }',
-  customSiteTitle: 'XGrow API Documentation',
+  customSiteTitle: 'Nimion API Documentation',
   swaggerOptions: {
     persistAuthorization: true,
   },
