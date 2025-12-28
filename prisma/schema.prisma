@@ -1,0 +1,87 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+// Role model - separate table for user roles
+model Role {
+    id          String   @id @default(uuid())
+    name        String   @unique
+    slug        String   @unique
+    description String?
+    permissions String?  @db.Text // JSON string of permissions
+    isDefault   Boolean  @default(false)
+    isActive    Boolean  @default(true)
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+
+    // Relations
+    users User[]
+
+    @@map("roles")
+}
+
+// User model for regular users
+model User {
+    id        String   @id @default(uuid())
+    email     String   @unique
+    password  String
+    name      String
+    phone     String?
+    avatar    String?
+    roleId    String
+    isActive  Boolean  @default(true)
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    // Relations
+    role Role @relation(fields: [roleId], references: [id])
+
+    @@index([roleId])
+    @@map("users")
+}
+
+// Admin model for administrative users
+model Admin {
+    id          String    @id @default(uuid())
+    email       String    @unique
+    password    String
+    name        String
+    phone       String?
+    avatar      String?
+    role        AdminRole @default(ADMIN)
+    permissions String?   @db.Text
+    isActive    Boolean   @default(true)
+    createdAt   DateTime  @default(now())
+    updatedAt   DateTime  @updatedAt
+
+    @@map("admins")
+}
+
+// Session model for tracking user sessions
+model Session {
+    id           String   @id @default(uuid())
+    userId       String
+    userType     String // 'user' or 'admin'
+    token        String   @unique @db.VarChar(500)
+    refreshToken String?  @db.VarChar(500)
+    expiresAt    DateTime
+    createdAt    DateTime @default(now())
+
+    @@index([userId, userType])
+    @@map("sessions")
+}
+
+// Enums
+enum AdminRole {
+    ADMIN
+    SUPER_ADMIN
+    MODERATOR
+}
